@@ -50,7 +50,7 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div>
+    <div sx={{fontFamily: 'Roboto'}}>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography variant="h6">EMDR</Typography>

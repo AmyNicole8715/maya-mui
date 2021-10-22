@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material";
-
+import "@fontsource/nova-round";
+import "@fontsource/roboto"
 
 
 const theme = createTheme({
@@ -16,6 +17,13 @@ const theme = createTheme({
           dark: '#3f1e53',
           contrastText: '#fff',
         },
+      },
+    typography: {
+        fontFamily: ['Roboto',
+        'Nova Round'
+        ].join(',')
       }
-});
+    }
+  
+);
 export default theme

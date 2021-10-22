@@ -26,7 +26,7 @@ export default function ButtonAppBar({title}) {
         >
             <MenuIcon />
         </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'Nova Round' }}>
             {title}
         </Typography>
         </Toolbar>

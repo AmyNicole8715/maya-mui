@@ -3,10 +3,10 @@ import CustomizedAccordions from './components/accordion';
 import ButtonAppBar from './components/appBar';
 import { ThemeProvider } from '@mui/material';
 import theme from './theme/theme';
-import MHPath from './assets/img/MHPath.jpg'
+import MWPath from './assets/img/MWPath.png';
 
 console.log(theme);
-console.log(MHPath)
+console.log(MWPath)
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -16,7 +16,7 @@ function App() {
           <div>
             <img 
               width="100%"
-              src={MHPath}
+              src={MWPath}
               alt="On the path to better Mental Health"
             />
           </div>
