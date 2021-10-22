@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { CssBaseline, Paper } from '@mui/material';
+import CustomizedAccordions from './components/accordion';
+import ButtonAppBar from './components/appBar';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from './theme/theme';
+import MHPath from './assets/img/MHPath.jpg'
 
+console.log(theme);
+console.log(MHPath)
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <CssBaseline>
+        <div>
+          <ButtonAppBar title="Maya Wellness"/>
+          <div>
+            <img 
+              width="100%"
+              source={MHPath}
+              alt="On the path to better Mental Health"
+            />
+          </div>
+          <Paper>
+            <CustomizedAccordions />
+          </Paper>
+        </div>
+      </CssBaseline>
+    </MuiThemeProvider>
+    
   );
 }
 
