@@ -9,6 +9,7 @@ const theme = createTheme({
           light: '#a35884',
           main: '#8d2f66',
           dark: '#622047',
+          background: '#ce87b1',
           contrastText: '#fff',
         },
         secondary: {
@@ -17,6 +18,9 @@ const theme = createTheme({
           dark: '#3f1e53',
           contrastText: '#fff',
         },
+        background: {
+          default: '#5b2c77',
+        }
       },
     typography: {
         fontFamily: ['Roboto',

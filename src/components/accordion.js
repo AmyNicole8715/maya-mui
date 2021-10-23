@@ -57,6 +57,7 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
             <Typography variant="h6">What is EMDR Therapy?</Typography>
+            <br/>
             <Typography variant="body1">EMDR IS NOT TALK THERAPY! EMDR (Eye Movement Desensitization and Reprocessing) is a 
               powerful method of psychotherapy utilized in the treatment and relief of many types of psychological distress.  When an event 
               is stored in short term memory, no matter how long ago the actual event happened, it causes the symptoms associated with 
@@ -67,7 +68,9 @@ export default function CustomizedAccordions() {
               memory.  Clients report an instant shift toward  well being, a sense of release, a feeling of peace and acceptance, and a 
               deep appreciation for their own strength after EMDR therapy.
             </Typography>
+            <br/>
             <Typography variant="h6">Is this treatment right for me?</Typography>
+            <br/>
             <Typography variant="body1">EMDR is effective in decreasing anxiety and targeting negative or irrational thinking, both of which may get in the 
               way of performance. EMDR can help a person to gain confidence in their ability to perform a task or reach a goal. EMDR 
               installs positive beliefs, while simultaneously decreasing fear, anxiety, or stress. EMDR boosts confidence and helps the 
