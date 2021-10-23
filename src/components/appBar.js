@@ -17,7 +17,25 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import MayaWellness from '../assets/img/MayaWellnessOnHover.png';
+import MayaWellnessStatic from '../assets/img/MayaWellnessStatic.png';
 
+const StaticIcon = styled(Box)`
+  width: 50px;
+  height: 50px;
+  background-image: url(${MayaWellnessStatic});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
+
+const MayaWellnessLogo = styled(Box)({
+  width: '50px',
+  height: '50px',
+  backgroundImage: `url(${MayaWellness})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+});
 
 const drawerWidth = 240;
 
@@ -121,29 +139,16 @@ export default function PersistentDrawerLeft({title}) {
         </DrawerHeader>
         <Divider />
         <List>
-          {['About Us', 'Specialties', 'Meet the Therapists', 'Drafts'].map((text, index) => (
+          {['About Us', 'Specialties', 'Meet the Therapists','Insurances Accepted', 'FAQ', 'Contact Us'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <StaticIcon /> : <MayaWellnessLogo />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
       </Drawer>
-      <Main open={open}>
-        <DrawerHeader />
-        <Typography variant="h6">
-          MAYA Organization in 2009 by Tomilyn Ward. From 2009 to 2014, MAYA operated as a volunteer-run adoption and 
-          birth mother advocacy agency, with a focus on fundraising and volunteer recruitment. In these years, MAYA provided pro bono 
-          counseling for birthmothers, and was able to extend financial support to several families adopting children with special needs.
-          In August of 2014, MAYA Organization grew into a staffed agency focusing on two initiatives: supporting people during pregnancy and beyond. Tomilyn continued to run MAYA Organization until June 2020, when she decided it was best to focus on providing counseling services. MAYA Organization continues to serve the needs of pregnant and parenting people in Pittsburgh, Pennsylvania.
-        </Typography>
-        <br/>
-        <Typography variant="h6">
-          Tomilyn opened Maya Wellness Center in 2017 to focus exclusively on provide counseling and consulting services. Today Maya Wellness Center provides trauma informed mental health counseling in Swissvale and North Hills areas of Pittsburgh, Pennsylvania.
-        </Typography>
-      </Main>
     </Box>
   );
 };

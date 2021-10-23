@@ -5,6 +5,14 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import { Paper } from '@mui/material';
+
+
+const AccordionContainer = styled(Paper)({
+    padding: "20px",
+    margin: "20px",
+    textAlign: "center"
+});
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -50,15 +58,15 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div sx={{fontFamily: 'Roboto'}}>
+    <AccordionContainer sx={{fontFamily: 'Roboto'}} elevation="12">
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography variant="h6">EMDR</Typography>
         </AccordionSummary>
         <AccordionDetails>
-            <Typography variant="h6">What is EMDR Therapy?</Typography>
+            <Typography variant="h4">What is EMDR Therapy?</Typography>
             <br/>
-            <Typography variant="body1">EMDR IS NOT TALK THERAPY! EMDR (Eye Movement Desensitization and Reprocessing) is a 
+            <Typography variant="h6">EMDR IS NOT TALK THERAPY! EMDR (Eye Movement Desensitization and Reprocessing) is a 
               powerful method of psychotherapy utilized in the treatment and relief of many types of psychological distress.  When an event 
               is stored in short term memory, no matter how long ago the actual event happened, it causes the symptoms associated with 
               ongoing, immediate trauma.  Chronic anxiety,poor concentration, an intensified “startle” response, and  guilt are all 
@@ -69,15 +77,15 @@ export default function CustomizedAccordions() {
               deep appreciation for their own strength after EMDR therapy.
             </Typography>
             <br/>
-            <Typography variant="h6">Is this treatment right for me?</Typography>
+            <Typography variant="h4">Is this treatment right for me?</Typography>
             <br/>
-            <Typography variant="body1">EMDR is effective in decreasing anxiety and targeting negative or irrational thinking, both of which may get in the 
+            <Typography variant="h6">EMDR is effective in decreasing anxiety and targeting negative or irrational thinking, both of which may get in the 
               way of performance. EMDR can help a person to gain confidence in their ability to perform a task or reach a goal. EMDR 
               installs positive beliefs, while simultaneously decreasing fear, anxiety, or stress. EMDR boosts confidence and helps the 
               brain to think in a healthier, more adaptive way by removing blocks (such as negative self-beliefs) and helping the person 
               to tap intothe treatment of the following:
             </Typography>
-            <Typography variant="subtitle1">
+            <Typography variant="h6">
             <ul style={{textAlign: 'left'}}>
                 <li>Performance Enhancement</li>
                 <li>Performance Anxiety</li>
@@ -227,6 +235,6 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </div>
+    </AccordionContainer>
   );
 }
