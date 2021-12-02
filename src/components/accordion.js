@@ -6,7 +6,18 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { Paper } from '@mui/material';
+import brain from '../assets/img/brain.png';
+import Box from '@mui/material/Box';
 
+const StyledBrain = styled(Box)({
+  padding: '0.5rem',
+  margin: '0.5rem',
+  maxWidth: '100%',
+  height: '550px',
+  backgroundImage: `url(${brain})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+});
 
 const AccordionContainer = styled(Paper)({
     padding: "20px",
@@ -70,7 +81,13 @@ export default function CustomizedAccordions() {
               powerful method of psychotherapy utilized in the treatment and relief of many types of psychological distress.  When an event 
               is stored in short term memory, no matter how long ago the actual event happened, it causes the symptoms associated with 
               ongoing, immediate trauma.  Chronic anxiety,poor concentration, an intensified “startle” response, and  guilt are all 
-              symptoms of Post Traumatic Stress Disorder.  Although PTSD is often associated with life events can also result from 
+              symptoms of Post Traumatic Stress Disorder. 
+            </Typography>
+            <br/>
+            <StyledBrain />
+            <br/>
+            <Typography variant="h6">            
+              Although PTSD is often associated with life events, it can also result from 
               recurring memories of childhood abuse, a traumatic car accident, loss of a loved one through death or divorce, or the 
               experience of life threatening illness.  EMDR facilitates the shift of the traumatic issue from short-term to long-term 
               memory.  Clients report an instant shift toward  well being, a sense of release, a feeling of peace and acceptance, and a 
