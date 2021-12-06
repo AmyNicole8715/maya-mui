@@ -17,6 +17,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { HashLink } from 'react-router-hash-link';
+
 import MayaWellness from '../assets/img/MayaWellnessOnHover.png';
 import MayaWellnessStatic from '../assets/img/MayaWellnessStatic.png';
 
@@ -139,14 +141,38 @@ export default function PersistentDrawerLeft({title}) {
         </DrawerHeader>
         <Divider />
         <List>
-          {['About Us', 'Specialties', 'Meet the Therapists','Insurances Accepted', 'FAQ', 'Contact Us'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <StaticIcon /> : <MayaWellnessLogo />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+          <HashLink to="/home#about-us">
+            <ListItem button >
+              <MayaWellnessLogo/>
+              <ListItemText sx={{ fontFamily: 'Roboto'}}>
+                About Us
+              </ListItemText>
             </ListItem>
-          ))}
+          </HashLink>
+          <HashLink to="/">
+            <ListItem button >
+              <MayaWellnessLogo/>
+              <ListItemText  />
+            </ListItem>
+          </HashLink>
+          <HashLink to="/">
+            <ListItem button >
+              <MayaWellnessLogo/>
+              <ListItemText  />
+            </ListItem>
+          </HashLink>
+          <HashLink to="/">
+            <ListItem button >
+              <MayaWellnessLogo/>
+              <ListItemText  />
+            </ListItem>
+          </HashLink>
+          <HashLink to="/">
+            <ListItem button >
+              <MayaWellnessLogo/>
+              <ListItemText  />
+            </ListItem>
+          </HashLink>
         </List>
       </Drawer>
     </Box>

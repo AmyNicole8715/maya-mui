@@ -127,11 +127,44 @@ export default function CustomizedAccordions() {
           <Typography variant="h6">Perinatal Mood and Anxiety Disorder</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+          <Typography variant="h4">What is Perinatal Mood and Anxiety Disorder?</Typography>
+          <Typography variant="h6">
+            Perinatal Mood Disorder is not postpartum depression.  Perinatal Mood Disorder includes anxiety and depression that can happen during pregnancy and can be screened for during the pregnancy and after the baby is born. For many women seeking help and experiencing Perinatal Mood Disorder symptoms, this is not their first episode of Major Depressive Disorder (MDD), depression, anxiety, bipolar or psychosis.  But for many new parents it may be the first time that these disorders are being recognized or treated.
+          </Typography>
+          <br/>
+          <Typography variant="h6">
+            The majority of women experience some kind of “baby blues” (yes that is the technical term) in the first two after having a baby.  It is caused by the sudden change in hormones after delivery.  Couple that with the stress, isolation, sleep deprivation, and fatigue of new parenthood. You might feel more tearful, overwhelmed, and more emotional than normal Generally, this will start within the first couple of days after delivery, peak around one week, and taper off by the end of the second week postpartum.  It is common for women who are feeling really terrible to wait the two-week period before seeking help because they believe it will pass.  If you are experiencing any of these symptoms within the first two weeks seek help immediately, you may have postpartum depression and should not have to wait two weeks to be screened. </Typography>
+          <br/>
+          <Typography variant="h6">
+            <ul style={{textAlign: 'left'}}>
+              <li>You might find your anxiety out of control</li>
+              <li>You are not able to sleep because of your anxiety—even when your baby is asleep.</li>
+              <li>You might find feelings of guilt or worthlessness overwhelming or begin to develop thoughts preoccupied with death or even wish you were not alive.</li>
+              <li>Thoughts of hurting the baby</li>
+            </ul>
+          </Typography>
+          <br/>
+          <Typography variant="h6">
+            Postpartum depression (PPD) is different from Perinatal Mood Disorder (PMD) because it only affects women after giving birth. With postpartum depression, feelings of sadness, loneliness, worthlessness, restlessness, and anxiety last much longer than a few weeks.
+          </Typography>
+          <Typography variant="h6">
+            <ul style={{textAlign: 'left'}}>
+              <li>Feeling sad or down often.</li>
+              <li>Frequent crying or tearfulness.</li>
+              <li>Feeling restless, irritable, or anxious.</li>
+              <li>Loss of interest or pleasure in life.</li>
+              <li>Loss of appetite.</li>
+              <li>Less energy and motivation to do things.</li>
+              <li>Difficulty sleeping, including trouble falling asleep, trouble staying asleep, or sleeping more than usual.</li>
+              <li>Feeling worthless, hopeless, or guilty.</li>
+              <li>Unexplained weight loss or gain.</li>
+              <li>Feeling like life isn't worth living.</li>
+              <li>Showing little interest in your baby.</li>
+            </ul>
+          </Typography>
+          <br/>
+          <Typography variant="h6">
+            Having a few symptoms of postpartum depression may mean it’s a good idea to talk to a therapist or social worker, especially if symptoms affect day-to-day life or cause lasting distress If you are experiencing symptoms during pregnancy or after the birth of your baby it is important that you let your healthcare provider know how you are feeling.  It’s important to seek help. Treatment options can include therapy, support groups, family and/or relationship counseling, and in some cases, antidepressants. Perinatal Mood Disorder and Postpartum depression are treatable, and most people feel better soon after beginning treatment.
           </Typography>
         </AccordionDetails>
       </Accordion>

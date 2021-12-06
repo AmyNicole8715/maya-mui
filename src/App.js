@@ -34,7 +34,7 @@ function App() {
             {/* <MayaTopBar title="Maya Wellness"/> */}
             <PersistentDrawerLeft title="Maya Wellness"/>
             <br />
-            <TherapistBios />
+            <TherapistBios id="about-us"/>
             <CustomizedAccordions />
           </div>
         </StyledPaper>
