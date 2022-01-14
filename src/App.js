@@ -1,11 +1,15 @@
 import { CssBaseline, Paper } from '@mui/material';
-import CustomizedAccordions from './components/accordion';
+import { styled } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material';
+
+import CustomizedAccordions from './components/accordion';
 import theme from './theme/theme';
 import MWPath from './assets/img/MWPath.png';
-import { styled } from '@mui/material/styles';
 import TherapistBios from './components/therapistBios';
 import PersistentDrawerLeft from './components/appBar';
+import Insurances from './components/insurances';
+import Contact from './components/contactUs';
+import ContactForm from './components/contactForm';
 
 const StyledPaper = styled(Paper)({
   padding: '20px',
@@ -36,6 +40,10 @@ function App() {
             <br />
             <TherapistBios id="about-us"/>
             <CustomizedAccordions />
+            <br />
+            <Insurances />
+            <br />
+            <ContactForm />
           </div>
         </StyledPaper>
       </CssBaseline>

@@ -1,7 +1,7 @@
-import { styled, Typography, useTheme } from "@mui/material";
+import { styled, Typography, useTheme, Paper, Popover } from "@mui/material";
 import { useState } from "react";
-import { Paper } from "@mui/material";
 import { fontSize } from "@mui/system";
+import Link from '@mui/material/Link';
 
 const MeetTheTherapists = styled(Paper)({
     padding: "20px",
@@ -30,9 +30,9 @@ export default function TherapistBios () {
             <Typography variant="h3" sx={{fontFamily:'Nova Round'}}>Meet the Therapists</Typography>
             <br/>
             <br/>
-            <Typography variant="h4">
+            <Link variant="h4" href="https://doxy.me/tomilyn">
                 Tomilyn Ward, LPC, MPC
-            </Typography>
+            </Link>
             <Typography variant="h5">
                 Founder & CEO
             </Typography>
@@ -47,6 +47,21 @@ export default function TherapistBios () {
                 connected.   
             </Typography>
             <br/>
+            <Typography variant="h6">
+                <ul style={{textAlign:'left'}}>
+                    <li>EMDR</li>
+                    <li>Perinatal Mood and Anxiety Disorder</li>
+                    <li>Depression</li>
+                    <li>Anxiety Disorders</li>
+                    <li>Postpartum Depression</li>
+                    <li>Infant Loss</li>
+                    <li>Birth Processing</li>
+                    <li>Traumatic Birth</li>
+                    <li>Provider Birth Processing</li>
+                    <li>Parenting</li>
+                    <li>Talk Therapy</li>
+                </ul>
+            </Typography>
             <br/>
             <Typography variant="h4">
                 Angela Angiolieri, MPC

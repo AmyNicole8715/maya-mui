@@ -68,6 +68,12 @@ export default function CustomizedAccordions() {
     setExpanded(newExpanded ? panel : false);
   };
 
+  // remove: depression through talk therapy and place under Tomilyn Ward
+  // add contact us page
+
+
+
+
   return (
     <AccordionContainer sx={{fontFamily: 'Roboto'}} elevation="12">
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -165,123 +171,6 @@ export default function CustomizedAccordions() {
           <br/>
           <Typography variant="h6">
             Having a few symptoms of postpartum depression may mean it’s a good idea to talk to a therapist or social worker, especially if symptoms affect day-to-day life or cause lasting distress If you are experiencing symptoms during pregnancy or after the birth of your baby it is important that you let your healthcare provider know how you are feeling.  It’s important to seek help. Treatment options can include therapy, support groups, family and/or relationship counseling, and in some cases, antidepressants. Perinatal Mood Disorder and Postpartum depression are treatable, and most people feel better soon after beginning treatment.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-        <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <Typography variant="h6">Depression</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
-        <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-          <Typography variant="h6">Anxiety Disorders</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
-        <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
-          <Typography variant="h6">Postpartum Depression</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
-        <AccordionSummary aria-controls="panel7d-content" id="panel7d-header">
-          <Typography variant="h6">Infant Loss</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')}>
-        <AccordionSummary aria-controls="panel8d-content" id="panel8d-header">
-          <Typography variant="h6">Birth Processing</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')}>
-        <AccordionSummary aria-controls="panel9d-content" id="panel9d-header">
-          <Typography variant="h6">Traumatic Birth</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel10'} onChange={handleChange('panel10')}>
-        <AccordionSummary aria-controls="panel10d-content" id="panel10d-header">
-          <Typography variant="h6">Provider Birth Processing</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel11'} onChange={handleChange('panel11')}>
-        <AccordionSummary aria-controls="panel11d-content" id="panel11d-header">
-          <Typography variant="h6">Parenting</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel12'} onChange={handleChange('panel12')}>
-        <AccordionSummary aria-controls="panel12d-content" id="panel12d-header">
-          <Typography variant="h6">Talk Therapy</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography variant="subtitle1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
           </Typography>
         </AccordionDetails>
       </Accordion>

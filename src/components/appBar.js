@@ -149,7 +149,7 @@ export default function PersistentDrawerLeft({title}) {
               </ListItemText>
             </ListItem>
           </HashLink>
-          <HashLink to="/">
+          <HashLink to="/home#specialties">
             <ListItem button >
               <MayaWellnessLogo/>
               <ListItemText  />
