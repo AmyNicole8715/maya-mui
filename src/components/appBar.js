@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -12,24 +12,13 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import { ListItemButton } from '@mui/material';
 import { HashLink } from 'react-router-hash-link';
 
 import MayaWellness from '../assets/img/MayaWellnessOnHover.png';
-import MayaWellnessStatic from '../assets/img/MayaWellnessStatic.png';
 
-const StaticIcon = styled(Box)`
-  width: 50px;
-  height: 50px;
-  background-image: url(${MayaWellnessStatic});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-`;
+
 
 const MayaWellnessLogo = styled(Box)({
   width: '50px',
@@ -37,28 +26,11 @@ const MayaWellnessLogo = styled(Box)({
   backgroundImage: `url(${MayaWellness})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
+  marginRight: '1rem',
 });
 
-const drawerWidth = 240;
+const drawerWidth = 290;
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: `-${drawerWidth}px`,
-    ...(open && {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginLeft: 0,
-    }),
-  }),
-);
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -88,7 +60,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 export default function PersistentDrawerLeft({title}) {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -101,7 +73,7 @@ export default function PersistentDrawerLeft({title}) {
   return (   
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} elevation="10">
+      <AppBar position="fixed" open={open} elevation="12">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -141,37 +113,102 @@ export default function PersistentDrawerLeft({title}) {
         </DrawerHeader>
         <Divider />
         <List>
-          <HashLink to="/home#about-us">
-            <ListItem button >
+          <HashLink to="#aboutus">
+            <ListItemButton onClick={handleDrawerClose} aria-label='About Us'>
               <MayaWellnessLogo/>
-              <ListItemText sx={{ fontFamily: 'Roboto'}}>
-                About Us
+              <ListItemText primaryTypographyProps={{ 
+                  variant: 'h6',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    fontSize: '1.5rem',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}
+                >
+                 About Us
               </ListItemText>
-            </ListItem>
+            </ListItemButton>
           </HashLink>
-          <HashLink to="/home#specialties">
-            <ListItem button >
+          <HashLink to="#meetthem">
+            <ListItemButton onClick={handleDrawerClose} aria-label='Meet The Therapists'>
               <MayaWellnessLogo/>
-              <ListItemText  />
-            </ListItem>
+              <ListItemText primaryTypographyProps={{ 
+                  variant: 'h6',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    fontSize: '1.5rem',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                Therapists
+              </ListItemText>
+            </ListItemButton>
           </HashLink>
-          <HashLink to="/">
-            <ListItem button >
+          <HashLink to="#specialties">
+            <ListItemButton onClick={handleDrawerClose} aria-label='Specialties'>
               <MayaWellnessLogo/>
-              <ListItemText  />
-            </ListItem>
+              <ListItemText primaryTypographyProps={{ 
+                  variant: 'h6',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    fontSize: '1.5rem',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                Specialties
+              </ListItemText>
+            </ListItemButton>
           </HashLink>
-          <HashLink to="/">
-            <ListItem button >
+          <HashLink to="#insurance">
+            <ListItemButton onClick={handleDrawerClose} aria-label='Insurances Accepted'>
               <MayaWellnessLogo/>
-              <ListItemText  />
-            </ListItem>
+              <ListItemText primaryTypographyProps={{ 
+                  variant: 'h6',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    fontSize: '1.1rem',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                Insurances Accepted
+              </ListItemText>
+            </ListItemButton>
           </HashLink>
-          <HashLink to="/">
-            <ListItem button >
+          <HashLink to="#contactus">
+            <ListItemButton onClick={handleDrawerClose} aria-label='Contact Form'>
               <MayaWellnessLogo/>
-              <ListItemText  />
-            </ListItem>
+              <ListItemText primaryTypographyProps={{ 
+                  variant: 'h6',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    fontSize: '1.5rem',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                Contact Us
+              </ListItemText>
+            </ListItemButton>
+          </HashLink>
+          <HashLink to="#workwithus">
+            <ListItemButton onClick={handleDrawerClose} aria-label='Positions and internships'>
+              <MayaWellnessLogo/>
+              <ListItemText primaryTypographyProps={{ 
+                  variant: 'h6',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    fontSize: '1.5rem',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                Work With Us
+              </ListItemText>
+            </ListItemButton>
           </HashLink>
         </List>
       </Drawer>

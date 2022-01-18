@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
@@ -13,8 +13,9 @@ const StyledBrain = styled(Box)({
   padding: '0.5rem',
   margin: '0.5rem',
   maxWidth: '100%',
-  height: '550px',
+  height: '400px',
   backgroundImage: `url(${brain})`,
+  backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
 });
@@ -62,23 +63,19 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function CustomizedAccordions() {
-  const [expanded, setExpanded] = React.useState('panel1');
+  const [expanded, setExpanded] = useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
 
-  // remove: depression through talk therapy and place under Tomilyn Ward
-  // add contact us page
-
-
-
-
   return (
-    <AccordionContainer sx={{fontFamily: 'Roboto'}} elevation="12">
+    <AccordionContainer sx={{fontFamily: 'Roboto'}} elevation="12" id="specialties" aria-label="EMDR and Perinatal Mood and Anxiety Disorder">
+      <br />
+      <br />
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography variant="h6">EMDR</Typography>
+          <Typography variant="h6" aria-label='EMDR'>EMDR</Typography>
         </AccordionSummary>
         <AccordionDetails>
             <Typography variant="h4">What is EMDR Therapy?</Typography>
@@ -128,9 +125,9 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} >
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography variant="h6">Perinatal Mood and Anxiety Disorder</Typography>
+          <Typography variant="h6" aria-label="Perinatal Mood and Anxiety Disorder">Perinatal Mood and Anxiety Disorder</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography variant="h4">What is Perinatal Mood and Anxiety Disorder?</Typography>

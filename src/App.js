@@ -8,8 +8,8 @@ import MWPath from './assets/img/MWPath.png';
 import TherapistBios from './components/therapistBios';
 import PersistentDrawerLeft from './components/appBar';
 import Insurances from './components/insurances';
-import Contact from './components/contactUs';
 import ContactForm from './components/contactForm';
+import MiscellaneousAccordions from './components/miscAccordion';
 
 const StyledPaper = styled(Paper)({
   padding: '20px',
@@ -22,20 +22,22 @@ const StyledPaper = styled(Paper)({
   justifyContent: 'center',
 });
 
-console.log(theme);
-console.log(MWPath)
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
-        <StyledPaper elevation={10} sx={{ backgroundColor: theme.palette.secondary.light}}>
+        <StyledPaper elevation={12} sx={{ backgroundColor: theme.palette.secondary.light}}>
           <div>
-              <img 
-                width="100%"
-                src={MWPath}
-                alt="On the path to better Mental Health"
-              />
-            {/* <MayaTopBar title="Maya Wellness"/> */}
+            <img 
+              width="100%"
+              src={MWPath}
+              alt="On the path to better Mental Health"
+              style={{
+                  marginBottom: "20px",
+                  boxShadow: "0px 0px 12px #000000",
+              }}
+            />
             <PersistentDrawerLeft title="Maya Wellness"/>
             <br />
             <TherapistBios id="about-us"/>
@@ -44,6 +46,9 @@ function App() {
             <Insurances />
             <br />
             <ContactForm />
+            <br />
+            <br />
+            <MiscellaneousAccordions />
           </div>
         </StyledPaper>
       </CssBaseline>

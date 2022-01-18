@@ -1,6 +1,6 @@
-import { useState, useRef } from "react";
-import axios from "axios";
-import { Box, TextField, Paper, Button } from "@mui/material";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
+import { Box, TextField, Paper, Button, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 
@@ -19,30 +19,24 @@ export default function ContactForm() {
     
 
     const sendEmail = (e) => {
-        e.preventDefault();
 
-        console.log(formRef.current.elements);
-        const message = formRef.current.elements.message.value;
-        const subject = formRef.current.elements.subject.value;
-        const fullName = formRef.current.elements.fullName.value;
-        const email = formRef.current.elements.email.value;
-
-        const body = { message, subject, fullName, email };
-
-        axios.post('http://localhost:8080/sendEmail', body)
-            .then(res => {
-                console.log(res);
-            })
-            .catch(err => {
-                console.log(err);
-            })
-            
+        emailjs.sendForm('service_8ddysun', 'template_dmooh5q', formRef.current, 'user_CDABsZ427RrcgC3ne30u5')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
         
     };
 
     return (
-        <ContactUs elevation="12" >
+        <ContactUs elevation="12" id="contactus">
+            <br />
+            <br />
+            <Typography variant="h3" sx={{ fontFamily: 'Nova Round'}}>Contact Us</Typography>
+            <br />
             <Box
+                aria-label="Contact Us Form"
                 component="form"
                 sx={{
                     '& .MuiTextField-root': { m: 1, width: '25ch' },
@@ -59,10 +53,12 @@ export default function ContactForm() {
                         color="secondary"
                         focused
                         label="Email"
+                        type="email"
                         multiline
                         maxRows={2}
                         name="email"
                         variant="filled"
+                        aria-label="Email"
                     />
                 </div>
                 <div>
@@ -76,6 +72,7 @@ export default function ContactForm() {
                         maxRows={2}
                         name="fullName"
                         variant="filled"
+                        aria-label="Full Name"
                         
                     />
                 </div>
@@ -89,7 +86,7 @@ export default function ContactForm() {
                         maxRows={2}
                         variant="filled"
                         name="subject"
-                        
+                        aria-label="Subject"
                     />
                 </div>
                 <div>
@@ -103,19 +100,19 @@ export default function ContactForm() {
                         maxRows={7}
                         variant="filled"
                         name="message"
-                        
+                        aria-label="Message"
                     />
                 </div>
                 <Button
                     color="secondary" 
                     variant="contained" 
                     type="submit"
-                    elevation="12"
                     label="Submit"
                     sx={{
                         height: "50px",
                         width: "200px",
                     }}
+                    aria-label="Submit Button"
                 >Submit</Button>
             </Box>
         </ContactUs>

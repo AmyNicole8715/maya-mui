@@ -1,7 +1,6 @@
 import { styled, Typography, useTheme } from "@mui/material";
-import { useState } from "react";
 import { Paper } from "@mui/material";
-import { fontSize } from "@mui/system";
+
 
 const Highmark = styled('img')({
     width: '10em',
@@ -38,7 +37,9 @@ const InsurancesAccepted = styled(Paper)({
 export default function Insurances () {
     const theme = useTheme();
     return (
-        <InsurancesAccepted elevation="12" sx={{backgroundColor: theme}}>
+        <InsurancesAccepted elevation="12" sx={{backgroundColor: theme}} id="insurance" aria-label='Insurances Accepted'>
+            <br/>
+            <br/>
             <Typography variant="h4">
                 Insurances Accepted
             </Typography>
