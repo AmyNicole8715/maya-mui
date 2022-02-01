@@ -5,8 +5,8 @@ import { styled } from "@mui/material/styles";
 
 
 const ContactUs = styled(Paper)({
-    padding: "20px",
-    margin: "20px",
+    padding: "1.25rem",
+    margin: "1.25rem",
     textAlign: "center",
 });
 

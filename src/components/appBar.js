@@ -21,8 +21,8 @@ import MayaWellness from '../assets/img/MayaWellnessOnHover.png';
 
 
 const MayaWellnessLogo = styled(Box)({
-  width: '50px',
-  height: '50px',
+  width: '3.125rem',
+  height: '3.125rem',
   backgroundImage: `url(${MayaWellness})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
@@ -113,7 +113,7 @@ export default function PersistentDrawerLeft({title}) {
         </DrawerHeader>
         <Divider />
         <List>
-          <HashLink to="#aboutus">
+          <HashLink to="#aboutus" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='About Us'>
               <MayaWellnessLogo/>
               <ListItemText primaryTypographyProps={{ 
@@ -130,7 +130,7 @@ export default function PersistentDrawerLeft({title}) {
               </ListItemText>
             </ListItemButton>
           </HashLink>
-          <HashLink to="#meetthem">
+          <HashLink to="#meetthem" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Meet The Therapists'>
               <MayaWellnessLogo/>
               <ListItemText primaryTypographyProps={{ 
@@ -146,7 +146,7 @@ export default function PersistentDrawerLeft({title}) {
               </ListItemText>
             </ListItemButton>
           </HashLink>
-          <HashLink to="#specialties">
+          <HashLink to="#specialties" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Specialties'>
               <MayaWellnessLogo/>
               <ListItemText primaryTypographyProps={{ 
@@ -162,7 +162,7 @@ export default function PersistentDrawerLeft({title}) {
               </ListItemText>
             </ListItemButton>
           </HashLink>
-          <HashLink to="#insurance">
+          <HashLink to="#insurance" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Insurances Accepted'>
               <MayaWellnessLogo/>
               <ListItemText primaryTypographyProps={{ 
@@ -178,7 +178,7 @@ export default function PersistentDrawerLeft({title}) {
               </ListItemText>
             </ListItemButton>
           </HashLink>
-          <HashLink to="#contactus">
+          <HashLink to="#contactus" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Contact Form'>
               <MayaWellnessLogo/>
               <ListItemText primaryTypographyProps={{ 
@@ -194,7 +194,7 @@ export default function PersistentDrawerLeft({title}) {
               </ListItemText>
             </ListItemButton>
           </HashLink>
-          <HashLink to="#workwithus">
+          <HashLink to="#workwithus" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Positions and internships'>
               <MayaWellnessLogo/>
               <ListItemText primaryTypographyProps={{ 

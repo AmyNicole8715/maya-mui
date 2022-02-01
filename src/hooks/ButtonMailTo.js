@@ -6,6 +6,7 @@ const ButtonMailTo = ({ mailto, label }) => {
             to={{
                 pathname: `${mailto}`
             }}
+            style={{ textDecoration: "none" }}
         >
             {label}
         </RouterLink>

@@ -13,7 +13,7 @@ const StyledBrain = styled(Box)({
   padding: '0.5rem',
   margin: '0.5rem',
   maxWidth: '100%',
-  height: '400px',
+  height: '25rem',
   backgroundImage: `url(${brain})`,
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
@@ -21,8 +21,8 @@ const StyledBrain = styled(Box)({
 });
 
 const AccordionContainer = styled(Paper)({
-    padding: "20px",
-    margin: "20px",
+    padding: "1.25rem",
+    margin: "1.25rem",
     textAlign: "center"
 });
 

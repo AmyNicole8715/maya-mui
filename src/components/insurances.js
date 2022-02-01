@@ -28,8 +28,8 @@ const Medicaid = styled('img')({
 });
 
 const InsurancesAccepted = styled(Paper)({
-    padding: "20px",
-    margin: "20px",
+    padding: "1.25rem",
+    margin: "1.25rem",
     textAlign: "center",
 });
 

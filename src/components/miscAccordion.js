@@ -10,13 +10,13 @@ import { Paper } from '@mui/material';
 import ButtonMailTo from '../hooks/ButtonMailTo';
 
 const AccordionContainer = styled(Paper)({
-    padding: "20px",
-    margin: "20px",
+    padding: "1.25rem",
+    margin: "1.25rem",
     textAlign: "center"
 });
 
 const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
+  <MuiAccordion disableGutters elevation={1} square {...props} />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
   '&:not(:last-child)': {
@@ -87,9 +87,9 @@ export default function MiscellaneousAccordions() {
             </Typography>
             <br/>
             <br/>
-            <Typography variant="h4">
+            <Typography variant="h6">
                 If you are looking to share your internship experience with a group of like-minded, trauma-informed clinicians please send your resume/CV to 
-                <ButtonMailTo label="tomilyn@mayawellness.org" mailto="mailto:tomilyn@mayawellness.org"/>
+                <ButtonMailTo label=" tomilyn@mayawellness.org" mailto="mailto:tomilyn@mayawellness.org"/>
             </Typography>
             <br/>
             <Typography variant="h5">
@@ -116,9 +116,9 @@ export default function MiscellaneousAccordions() {
             This is a great opportunity if you are newly licensed. Referrals come from internal and external networking sources, as well as from your own Psychology Today page.  Weekly Supervision is offered and provides an environment for peer-to-peer consultation. 
           </Typography>
           <br/>
-          <Typography variant="h4"> 
+          <Typography variant="h6"> 
             If you are looking to join a group of like-minded, trauma-informed clinicians, please send your resume/CV to 
-            <ButtonMailTo label="tomilyn@mayawellness.org" mailto="mailto:tomilyn@mayawellness.org"/>
+            <ButtonMailTo label=" tomilyn@mayawellness.org" mailto="mailto:tomilyn@mayawellness.org" />
           </Typography>
             <br/>
             <br/>

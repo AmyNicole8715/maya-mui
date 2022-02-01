@@ -1,5 +1,6 @@
 {
   "name": "maya-mui",
+  "homepage": "https://mayawellness.org/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,7 +29,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "set HTTPS=true&&react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
