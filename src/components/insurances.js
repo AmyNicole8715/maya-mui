@@ -3,34 +3,40 @@ import { Paper } from "@mui/material";
 
 
 const Highmark = styled('img')({
-    width: '10em',
-    height: '2.5em',
+    maxWidth: '10em',
+    height: '3.5em',
+    backgroundSize: 'contain',
 });
 
 const United = styled('img')({
-    width: '10em',
-    height: '2.5em',
+    maxWidth: '10em',
+    height: '3.5em',
+    backgroundSize: 'contain',
 });
 
 const Upmc = styled('img')({
-    width: '10em',
-    height: '2.5em',
+    maxWidth: '10em',
+    height: '3.5em',
+    backgroundSize: 'contain',
 });
 
 const Cigna = styled('img')({
-    width: '4em',
-    height: '2.5em',
+    maxWidth: '4em',
+    height: '3.5em',
+    backgroundSize: 'contain',
 });
 
 const Medicaid = styled('img')({
-    width: '10em',
-    height: '2.5em',
+    maxWidth: '10em',
+    height: '3.5em',
+    backgroundSize: 'contain',
 });
 
 const InsurancesAccepted = styled(Paper)({
     padding: "1.25rem",
     margin: "1.25rem",
     textAlign: "center",
+    flexWrap: "wrap",
 });
 
 

@@ -24,7 +24,7 @@ const MayaWellnessLogo = styled(Box)({
   width: '3.125rem',
   height: '3.125rem',
   backgroundImage: `url(${MayaWellness})`,
-  backgroundSize: 'cover',
+  backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
   marginRight: '1rem',
 });

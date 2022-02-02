@@ -43,7 +43,7 @@ export default function TherapistBios () {
         <MeetTheTherapists elevation="12" sx={{backgroundColor: theme}} id="aboutus">
             <br/>
             <br/>
-            <Typography variant="h3" sx={{fontFamily:'Nova Round'}} aria-label='About Us'>About Us</Typography>
+            <Typography variant="h3" sx={{fontFamily:'Nova Round'}}>About Us</Typography>
             <br />
             <Typography variant="h6">
             MAYA Organization in 2009 by Tomilyn Ward. From 2009 to 2014, MAYA operated as a volunteer-run adoption and 
@@ -64,8 +64,8 @@ export default function TherapistBios () {
             <br/>
             <SetDisplayedTherapist />
             <br/>
-            <Link variant="h4" href={dictionary.url} target="_blank" aria-label='Tomilyn Ward doxy telehealth'>
-                <TherapistInfo tid={dictionary.name}></TherapistInfo>
+            <Link variant="h4" href={dictionary.url} target="_blank" aria-labelledby='Doxy link'>
+                <TherapistInfo id='Doxy link' tid={dictionary.name}></TherapistInfo>
             </Link>
             <Typography variant="h5">
                 <TherapistInfo tid={dictionary.title}></TherapistInfo>

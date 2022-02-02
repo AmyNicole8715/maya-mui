@@ -68,7 +68,7 @@ export default function MiscellaneousAccordions() {
     <AccordionContainer sx={{fontFamily: 'Roboto'}} elevation="12" id="workwithus" aria-label='Internships and Careers'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography variant="h6" aria-label='Internships'>Internships</Typography>
+          <Typography variant="h6">Internships</Typography>
         </AccordionSummary>
         <AccordionDetails>
             <Typography variant="h4">Counseling Intern</Typography>
@@ -99,7 +99,7 @@ export default function MiscellaneousAccordions() {
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography variant="h6" aria-label='Careers'>Careers</Typography>
+          <Typography variant="h6">Careers</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography variant="h4">

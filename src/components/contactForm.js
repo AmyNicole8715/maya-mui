@@ -58,7 +58,6 @@ export default function ContactForm() {
                         maxRows={2}
                         name="email"
                         variant="filled"
-                        aria-label="Email"
                     />
                 </div>
                 <div>
@@ -72,7 +71,6 @@ export default function ContactForm() {
                         maxRows={2}
                         name="fullName"
                         variant="filled"
-                        aria-label="Full Name"
                         
                     />
                 </div>
@@ -86,7 +84,6 @@ export default function ContactForm() {
                         maxRows={2}
                         variant="filled"
                         name="subject"
-                        aria-label="Subject"
                     />
                 </div>
                 <div>
@@ -100,7 +97,6 @@ export default function ContactForm() {
                         maxRows={7}
                         variant="filled"
                         name="message"
-                        aria-label="Message"
                     />
                 </div>
                 <Button
@@ -111,8 +107,7 @@ export default function ContactForm() {
                     sx={{
                         height: "50px",
                         width: "200px",
-                    }}
-                    aria-label="Submit Button"
+                    }}   
                 >Submit</Button>
             </Box>
         </ContactUs>
