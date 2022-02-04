@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { styled, Typography, useTheme, Paper, Divider } from "@mui/material";
 import Link from '@mui/material/Link';
+import scstyles from "styled-components";
 
 import SetDisplayedTherapist from "../hooks/setTherapistBio";
 import { TherapistContext } from "../context/therapistContext";
@@ -12,6 +13,16 @@ const MeetTheTherapists = styled(Paper)({
     margin: "1.25rem",
     textAlign: "center",
 });
+
+const MeetIntro = scstyles.div`
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    font-family: "Nova Round";
+    @media (max-width: 400px) {
+        font-size: 2rem;
+    }`;
+
+
 
 const TherapistInfo = styled(Text)({
     fontFamily: "Roboto",
@@ -28,7 +39,7 @@ const StyledImage = styled('img')({
     padding: '0.5rem',
     margin: '0.5rem',
     maxWidth: '100%',
-    height: '50vh',
+    maxHeight: '50vh',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -46,7 +57,7 @@ export default function TherapistBios () {
             <Typography variant="h3" sx={{fontFamily:'Nova Round'}}>About Us</Typography>
             <br />
             <Typography variant="h6">
-            MAYA Organization in 2009 by Tomilyn Ward. From 2009 to 2014, MAYA operated as a volunteer-run adoption and 
+            MAYA Organization was established in 2009 by Tomilyn Ward. From 2009 to 2014, MAYA operated as a volunteer-run adoption and 
             birth mother advocacy agency, with a focus on fundraising and volunteer recruitment. In these years, MAYA provided pro bono 
             counseling for birthmothers, and was able to extend financial support to several families adopting children with special needs.
             In August of 2014, MAYA Organization grew into a staffed agency focusing on two initiatives: supporting people during pregnancy and beyond. Tomilyn continued to run MAYA Organization until June 2020, when she decided it was best to focus on providing counseling services. MAYA Organization continues to serve the needs of pregnant and parenting people in Pittsburgh, Pennsylvania.
@@ -60,7 +71,7 @@ export default function TherapistBios () {
             <br/>
             <br/>
             <br/>
-            <Typography variant="h3" sx={{fontFamily:'Nova Round'}} >Meet the Therapists</Typography>
+            <MeetIntro >Meet the Therapists</MeetIntro>
             <br/>
             <SetDisplayedTherapist />
             <br/>

@@ -24,7 +24,6 @@ const StyledPaper = styled(Paper)({
 
 const StyledImage = styled('img')({
   width: '100%',
-  marginBottom: '1.25rem',
   boxShadow: '0 0 0.75rem #000000',
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
