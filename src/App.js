@@ -1,4 +1,4 @@
-import { CssBaseline, Paper } from '@mui/material';
+import { CssBaseline, Paper, useMediaQuery } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material';
 
@@ -6,6 +6,7 @@ import { TherapistProvider } from './context/therapistContext';
 import CustomizedAccordions from './components/accordion';
 import theme from './theme/theme';
 import MWPath from './assets/img/MWPath.png';
+import MWPathMobile from './assets/img/MWPathMobile.png';
 import TherapistBios from './components/therapistBios';
 import PersistentDrawerLeft from './components/appBar';
 import Insurances from './components/insurances';
@@ -30,13 +31,21 @@ const StyledImage = styled('img')({
 });
 
 function App() {
+  const mobile = useMediaQuery('(max-width: 500px)');
+  const desktop = useMediaQuery('(min-width: 500px)');
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
         <TherapistProvider>
           <StyledPaper elevation={12} sx={{ backgroundColor: theme.palette.secondary.light}}>
             <div>
-              <StyledImage src={MWPath}/>
+              {mobile && 
+                <StyledImage src={MWPathMobile} alt="Maya Wellness Logo" />
+              }
+              {desktop &&
+                <StyledImage src={MWPath} alt='Maya Wellness Logo'/>
+              }
               <PersistentDrawerLeft title="Maya Wellness"/>
               <br />
               <TherapistBios id="about-us"/>
@@ -48,6 +57,7 @@ function App() {
               <br />
               <br />
               <MiscellaneousAccordions />
+              <br />
             </div>
           </StyledPaper>
         </TherapistProvider>

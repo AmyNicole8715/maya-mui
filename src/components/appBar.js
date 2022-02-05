@@ -13,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemText from '@mui/material/ListItemText';
-import { ListItemButton } from '@mui/material';
+import { ListItemButton, useMediaQuery } from '@mui/material';
 import { HashLink } from 'react-router-hash-link';
 
 import MayaWellness from '../assets/img/MayaWellnessOnHover.png';
@@ -29,7 +29,7 @@ const MayaWellnessLogo = styled(Box)({
   marginRight: '1rem',
 });
 
-const drawerWidth = 290;
+const drawerWidth = 350;
 
 
 const AppBar = styled(MuiAppBar, {
@@ -59,6 +59,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function PersistentDrawerLeft({title}) {
+  const mobile = useMediaQuery('(max-width: 500px)');
+  const desktop = useMediaQuery('(min-width: 500px)');
   const theme = useTheme();
   const [open, setOpen] = useState(false);
 
@@ -84,9 +86,16 @@ export default function PersistentDrawerLeft({title}) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, fontFamily: 'Nova Round', fontSize: '2rem' }}>
-            {title}
-          </Typography>
+          {mobile &&
+            <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, fontFamily: 'Nova Round'}}>
+              {title}
+            </Typography>
+          }
+          {desktop &&
+            <Typography variant="h4" noWrap component="div" sx={{ flexGrow: 1, fontFamily: 'Nova Round'}}>
+              {title}
+            </Typography>
+          }
         </Toolbar>
       </AppBar>
       <Drawer
@@ -116,98 +125,180 @@ export default function PersistentDrawerLeft({title}) {
           <HashLink to="#aboutus" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='About Us'>
               <MayaWellnessLogo/>
-              <ListItemText primaryTypographyProps={{ 
+              {mobile &&
+                <ListItemText 
+                  primaryTypographyProps={{ 
                   variant: 'h6',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    color: 'white',
+                    marginLeft: '1rem',
+                    flexWrap: 'wrap',
+                  }
+                  }}>
+                  About Us
+                </ListItemText>
+              }
+              {desktop &&
+                <ListItemText primaryTypographyProps={{ 
+                  variant: 'h5',
                   style: {
                     fontFamily: 'Nova Round',
                     fontSize: '1.5rem',
                     color: 'white',
                     marginLeft: '1rem',
+                    flexWrap: 'wrap',
                   }
                 }}
                 >
                  About Us
-              </ListItemText>
+                </ListItemText>
+              }
             </ListItemButton>
           </HashLink>
           <HashLink to="#meetthem" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Meet The Therapists'>
               <MayaWellnessLogo/>
-              <ListItemText primaryTypographyProps={{ 
+              {mobile &&
+                <ListItemText primaryTypographyProps={{ 
                   variant: 'h6',
                   style: {
                     fontFamily: 'Nova Round',
-                    fontSize: '1.5rem',
                     color: 'white',
                     marginLeft: '1rem',
                   }
                 }}>
                 Therapists
               </ListItemText>
+              }
+              {desktop &&
+                <ListItemText primaryTypographyProps={{ 
+                  variant: 'h5',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                  Therapists
+                </ListItemText>
+              }
             </ListItemButton>
           </HashLink>
           <HashLink to="#specialties" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Specialties'>
               <MayaWellnessLogo/>
-              <ListItemText primaryTypographyProps={{ 
+              {mobile &&
+                <ListItemText primaryTypographyProps={{ 
                   variant: 'h6',
                   style: {
                     fontFamily: 'Nova Round',
-                    fontSize: '1.5rem',
                     color: 'white',
                     marginLeft: '1rem',
                   }
                 }}>
-                Specialties
-              </ListItemText>
+                  Specialties
+                </ListItemText>
+              } 
+              {desktop &&
+                <ListItemText primaryTypographyProps={{ 
+                  variant: 'h5',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                  Specialties
+                </ListItemText>
+              }
             </ListItemButton>
           </HashLink>
           <HashLink to="#insurance" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Insurances Accepted'>
               <MayaWellnessLogo/>
-              <ListItemText primaryTypographyProps={{ 
-                  variant: 'h6',
+              {mobile &&
+                <ListItemText primaryTypographyProps={{ 
+                  variant: 'body1',
                   style: {
                     fontFamily: 'Nova Round',
-                    fontSize: '1.1rem',
                     color: 'white',
                     marginLeft: '1rem',
                   }
                 }}>
-                Insurances Accepted
-              </ListItemText>
+                  Insurances Accepted
+                </ListItemText>
+              }
+              {desktop &&
+                <ListItemText primaryTypographyProps={{ 
+                  variant: 'h6',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                  Insurances Accepted
+                </ListItemText>
+              }
             </ListItemButton>
           </HashLink>
           <HashLink to="#contactus" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Contact Form'>
               <MayaWellnessLogo/>
-              <ListItemText primaryTypographyProps={{ 
+              {mobile &&
+                <ListItemText primaryTypographyProps={{ 
                   variant: 'h6',
                   style: {
                     fontFamily: 'Nova Round',
-                    fontSize: '1.5rem',
                     color: 'white',
                     marginLeft: '1rem',
                   }
                 }}>
-                Contact Us
-              </ListItemText>
+                  Contact Us
+                </ListItemText>
+              }
+              {desktop &&
+                <ListItemText primaryTypographyProps={{ 
+                  variant: 'h5',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                  Contact Us
+                </ListItemText>
+              }
             </ListItemButton>
           </HashLink>
           <HashLink to="#workwithus" style={{ textDecoration: "none" }}>
             <ListItemButton onClick={handleDrawerClose} aria-label='Positions and internships'>
               <MayaWellnessLogo/>
-              <ListItemText primaryTypographyProps={{ 
+              {mobile &&
+                <ListItemText primaryTypographyProps={{ 
                   variant: 'h6',
                   style: {
                     fontFamily: 'Nova Round',
-                    fontSize: '1.5rem',
                     color: 'white',
                     marginLeft: '1rem',
                   }
                 }}>
-                Work With Us
-              </ListItemText>
+                  Work With Us
+                </ListItemText>
+              }
+              {desktop &&
+                <ListItemText primaryTypographyProps={{ 
+                  variant: 'h5',
+                  style: {
+                    fontFamily: 'Nova Round',
+                    color: 'white',
+                    marginLeft: '1rem',
+                  }
+                }}>
+                  Work With Us
+                </ListItemText>
+              }
             </ListItemButton>
           </HashLink>
         </List>
