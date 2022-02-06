@@ -63,13 +63,23 @@ export default function PersistentDrawerLeft({title}) {
   const desktop = useMediaQuery('(min-width: 500px)');
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const [isShown, setIsShown] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
   };
 
+  const handleMouseEnter = (e) => {
+    setIsShown(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsShown(false);
+  };
+
   const handleDrawerClose = () => {
     setOpen(false);
+    setIsShown(false);
   };
 
   return (   
@@ -123,8 +133,14 @@ export default function PersistentDrawerLeft({title}) {
         <Divider />
         <List>
           <HashLink to="#aboutus" style={{ textDecoration: "none" }}>
-            <ListItemButton onClick={handleDrawerClose} aria-label='About Us'>
-              <MayaWellnessLogo/>
+            <ListItemButton 
+              onClick={handleDrawerClose} 
+              aria-label='About Us'
+              id='aboutus'
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              >
+              {isShown && <MayaWellnessLogo />}
               {mobile &&
                 <ListItemText 
                   primaryTypographyProps={{ 
@@ -157,8 +173,14 @@ export default function PersistentDrawerLeft({title}) {
             </ListItemButton>
           </HashLink>
           <HashLink to="#meetthem" style={{ textDecoration: "none" }}>
-            <ListItemButton onClick={handleDrawerClose} aria-label='Meet The Therapists'>
-              <MayaWellnessLogo/>
+            <ListItemButton 
+              onClick={handleDrawerClose} 
+              aria-label='Meet The Therapists'
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              id='meetthem'
+              >
+              {isShown && <MayaWellnessLogo />}
               {mobile &&
                 <ListItemText primaryTypographyProps={{ 
                   variant: 'h6',
@@ -186,8 +208,14 @@ export default function PersistentDrawerLeft({title}) {
             </ListItemButton>
           </HashLink>
           <HashLink to="#specialties" style={{ textDecoration: "none" }}>
-            <ListItemButton onClick={handleDrawerClose} aria-label='Specialties'>
-              <MayaWellnessLogo/>
+            <ListItemButton 
+              onClick={handleDrawerClose} 
+              aria-label='Specialties'
+              id='specialties' 
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              >
+              {isShown && <MayaWellnessLogo />}
               {mobile &&
                 <ListItemText primaryTypographyProps={{ 
                   variant: 'h6',
@@ -215,8 +243,14 @@ export default function PersistentDrawerLeft({title}) {
             </ListItemButton>
           </HashLink>
           <HashLink to="#insurance" style={{ textDecoration: "none" }}>
-            <ListItemButton onClick={handleDrawerClose} aria-label='Insurances Accepted'>
-              <MayaWellnessLogo/>
+            <ListItemButton 
+              onClick={handleDrawerClose} 
+              aria-label='Insurances Accepted'
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              id='insurance'
+              >
+              {isShown && <MayaWellnessLogo />}
               {mobile &&
                 <ListItemText primaryTypographyProps={{ 
                   variant: 'body1',
@@ -244,8 +278,14 @@ export default function PersistentDrawerLeft({title}) {
             </ListItemButton>
           </HashLink>
           <HashLink to="#contactus" style={{ textDecoration: "none" }}>
-            <ListItemButton onClick={handleDrawerClose} aria-label='Contact Form'>
-              <MayaWellnessLogo/>
+            <ListItemButton 
+              onClick={handleDrawerClose} 
+              aria-label='Contact Form'
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              id='contactus'
+              >
+              {isShown && <MayaWellnessLogo />}
               {mobile &&
                 <ListItemText primaryTypographyProps={{ 
                   variant: 'h6',
@@ -273,8 +313,14 @@ export default function PersistentDrawerLeft({title}) {
             </ListItemButton>
           </HashLink>
           <HashLink to="#workwithus" style={{ textDecoration: "none" }}>
-            <ListItemButton onClick={handleDrawerClose} aria-label='Positions and internships'>
-              <MayaWellnessLogo/>
+            <ListItemButton 
+              onClick={handleDrawerClose} 
+              aria-label='Positions and internships'
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              id='workwithus'
+              >
+              {isShown && <MayaWellnessLogo />}
               {mobile &&
                 <ListItemText primaryTypographyProps={{ 
                   variant: 'h6',
